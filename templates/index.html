@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Boggle Game</title>
+</head>
+<body>
+    <h1>Boggle</h1>
+<table>
+    <tbody>
+        {% for row in board %}
+        <tr>
+            {% for cell in row %}
+            <td>{{cell}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<form action="" method='POST' id="guess-form">
+    <input name="word" class="word">
+    <button>Submit</button>
+</form>
+
+<div class="show-message"></div>
+<div class="show-word"></div>
+<ul></ul>
+<div class="show-score"></div>
+
+
+<script src="http://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+<script src ='/static/app.js'></script>
+
+</body>
+</html>
